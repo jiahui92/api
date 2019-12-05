@@ -7,7 +7,8 @@ class Con extends Controller {
   async log() {
     const { ctx } = this;
     ctx.body = 'success';
-    // ctx._timestamp = new Date().getTime();
+    ctx.query._timestamp = new Date().getTime();
+    ctx.query._timestr = new Date().toString();
     console.log(ctx.query);
   }
 }
