@@ -9,7 +9,7 @@ class Con extends Controller {
     ctx.body = 'success';
     ctx.query._timestamp = new Date().getTime();
     ctx.query._timestr = new Date().toString();
-    console.log(ctx.query);
+    ctx.logger.info(ctx.query);
   }
 }
 
