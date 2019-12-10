@@ -11,7 +11,7 @@ class Con extends Controller {
       groups: ['638298', 'blabla', 'insidestory', 'buybook', 'ShutFuckUp']
     }, {
       name: '北京',
-      groups: ['beijingzufang', 'zhufang', '26926']
+      groups: ['625354', 'zhufang', 'beijingzufang', '26926']
     }, {
       name: '上海',
       groups: ['shanghaizufang', 'pudongzufang', 'homeatshanghai']
