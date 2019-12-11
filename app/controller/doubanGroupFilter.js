@@ -8,7 +8,7 @@ class Con extends Controller {
     const { ctx } = this;
     ctx.body = [{
       name: '宝藏测试小组',
-      groups: ['638298', 'blabla', 'insidestory', 'buybook', 'ShutFuckUp']
+      groups: ['638298', 'blabla', 'insidestory', 'buybook']
     }, {
       name: '北京',
       groups: ['625354', 'zhufang', 'beijingzufang', '26926']
