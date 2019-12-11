@@ -7,7 +7,7 @@ module.exports = app => {
   const { router, controller } = app;
   router.get('/', controller.home.index);
 
-  router.get('/logger/log', controller.logger.log);
+  router.all('/logger/log', controller.logger.log);
   
   router.get('/doubanGroupFilter/getRecommendGroups', controller.doubanGroupFilter.getRecommendGroups);
 };
