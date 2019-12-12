@@ -7,8 +7,8 @@ class Con extends Controller {
   async getRecommendGroups() {
     const { ctx } = this;
     ctx.body = [{
-      name: '宝藏测试小组',
-      groups: ['638298', 'blabla', 'insidestory', 'buybook']
+      name: '宝藏：哈组、鹅组等',
+      groups: ['638298', 'blabla', 'insidestory']
     }, {
       name: '北京',
       groups: ['625354', 'zhufang', 'beijingzufang', '26926']
