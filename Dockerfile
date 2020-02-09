@@ -26,10 +26,7 @@ RUN npm i --registry=https://registry.npm.taobao.org  --production
 COPY . /app
 
 EXPOSE 7001
-VOLUME [ "$HOME/logs" ]
+VOLUME [ "/root/logs" ]
 
 # RUN npm run test
 CMD npm run start
-
-# docker build -t api ./
-# docker run -name api -p 7001:7001 -v $HOME/logs:~/logs -it 75f61f748087
