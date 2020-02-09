@@ -31,4 +31,5 @@ VOLUME [ "$HOME/logs" ]
 # RUN npm run test
 CMD npm run start
 
+# docker build -t api ./
 # docker run -name api -p 7001:7001 -v $HOME/logs:~/logs -it 75f61f748087
