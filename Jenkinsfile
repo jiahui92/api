@@ -9,7 +9,7 @@ pipeline {
 
     stage('run') {
       steps {
-        sh 'docker run -name api -p 7001:7001 -v $HOME/logs:~/logs'
+        sh 'docker run -name api -p 7001:7001 -v ~/logs:~/logs api'
       }
     }
 
