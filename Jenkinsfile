@@ -1,22 +1,15 @@
 pipeline {
-  agent {
-    docker {
-      image 'node:10-alpine'
-      args '-p 7001:7001'
-    }
-
-  }
+  agent any
   stages {
-    stage('Build') {
+    stage('build') {
       steps {
-        sh '''npm install
-'''
+        sh 'docker build -t api ./'
       }
     }
 
-    stage('dev') {
+    stage('run') {
       steps {
-        sh 'npm run start'
+        sh 'docker run -name api -p 7001:7001 -v $HOME/logs:~/logs'
       }
     }
 
