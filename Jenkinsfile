@@ -1,12 +1,17 @@
 pipeline {
   agent any
   stages {
+    stage('build') {
+      steps {
+        sh 'docker build . -t api'
+      }
+    }
+
     stage('run') {
       steps {
-        sh '''
-          docker-compose up -d --build
-          docker logs api
-        '''
+        sh '''docker rm -f api
+docker run -d --name api -p 7001:7001 -v ~/logs:/root/logs --restart always api
+docker logs api'''
       }
     }
 
