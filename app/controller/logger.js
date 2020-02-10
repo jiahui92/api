@@ -9,7 +9,7 @@ class Con extends Controller {
     ctx.body = 'success';
     ctx.query._timestamp = new Date().getTime();
     ctx.query._timestr = new Date().toString();
-    ctx.logger.info(ctx.query);
+    ctx.logger.info(JSON.stringify(ctx.query));
   }
 }
 
