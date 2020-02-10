@@ -9,9 +9,12 @@ pipeline {
 
     stage('run') {
       steps {
-        sh '''docker rm -f api
+        sh '''
+
+docker rm -f api || true
 docker run -d --name api -p 7001:7001 -v ~/logs:/root/logs --restart always api
-docker logs api'''
+docker logs api
+'''
       }
     }
 
