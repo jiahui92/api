@@ -1,33 +1,13 @@
 # api
+* 主要用于生成各应用的log打点数据，然后通过filebaet录入到ELK中
+  * `/logger/log`
+  * log默认生成在`~/logs`
+* <s>其次可简单地提供可配置的数据 (使用consul代替了)</s>
 
 
-
-## QuickStart
-
-<!-- add docs here for user -->
-
-see [egg docs][egg] for more detail.
-
-### Development
-
-```bash
-$ npm i
-$ npm run dev
-$ open http://localhost:7001/
-```
-
-### Deploy
-
-```bash
-$ npm start
-$ npm stop
-```
-
-### npm scripts
-
-- Use `npm run lint` to check code style.
-- Use `npm test` to run unit test.
-- Use `npm run autod` to auto detect dependencies upgrade, see [autod](https://www.npmjs.com/package/autod) for more detail.
-
-
-[egg]: https://eggjs.org
+### 启动
+* 本地开发
+  * npm run dev
+* 服务器部署
+  * npm run start
+  * 或者 使用jenkins + docker
