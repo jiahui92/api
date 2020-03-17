@@ -12,6 +12,7 @@ pipeline {
         sh '''
 docker rm -f api || true 
 docker run -d --name api -p 7001:7001 -v ~/logs:/root/logs --restart always api
+sleep 1
 docker logs api
 '''
       }
